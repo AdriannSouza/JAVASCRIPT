@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 09</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Países</h1>
+        <span>Qual seu país de origem?</span>
+        <input type="text" class="txtp">
+        <input type="button" value="enviar" onclick="enviar()"> <!--Botão-->
+
+    <div class="res-fix">
+        Seu resultado:
+    </div>
+    <div class="res"></div>
+
+    <script>       
+        function enviar() {
+            var txtp = window.document.querySelector('.txtp')
+            var res = window.document.querySelector('.res')
+            var p = String(txtp.value)
+             res.innerHTML = `Seu país é ${p}`
+
+            if(p == 'Brasil' || p == 'brasil') {
+                res.innerHTML = 'Você é brasileiro'
+            } else {
+                res.innerHTML = 'Você é estrangeiro'                
+            }
+        }
+    </script>
+</body>
+</html>

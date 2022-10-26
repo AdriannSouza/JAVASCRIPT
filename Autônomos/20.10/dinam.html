@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <script>
+            var agora = new Date() //define data atual
+            var hora = agora.getHours() //capta as horas da data atual
+            if (hora < 6) {
+                document.write('<strong>Boa madrugada!</strong> <br>')
+                document.body.style.backgroundColor = 'lightgray'
+            } else if(hora <12){
+                document.write('<strong>Bom dia!</strong> <br>')
+                document.body.style.backgroundColor = 'green'
+            } else if(hora < 16) {
+                document.write('<strong>Boa tarde!</strong> <br>')
+                document.body.style.backgroundColor = 'gold'
+            } else if(hora < 24) {
+                document.write('<strong>Boa noite!</strong> <br>')
+                document.body.style.backgroundColor = 'gray'
+            }
+            document.write(`As horas são exatamente ${hora}`)
+        </script>
+    </header>
+
+<main class="#"> <!--Conteúdo principal-->
+    <h1>Site Dinâmico</h1>
+</main>
+</body>
+</html>

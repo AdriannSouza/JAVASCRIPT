@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        #area {
+            background-color: #f9f966;
+            font-family: 'Poppins', sans-serif;
+            color: black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--sempre colocar parênteses-->
+        Interaja...
+    </div>
+
+    <script>
+         var area = document.getElementById('area') //GetId para identificar sobre qual elemento HTML estamos nos referindo, precisamos também definir uma variável para esse termo selecionado
+
+
+        area.addEventListener ('click', clickar)
+        area.addEventListener ('mouseenter', entrar)
+        area.addEventListener ('moseout', sair)
+
+        function clickar() {
+            area.innerHTML = 'Clickou'
+            area.style.backgroundColor = '#87E6F0'
+        }
+
+        function entrar() {
+            area.innerText = 'Entrou!'
+            area.style.background = 'red'
+        }
+        function sair() {
+            area.innerText = 'Saiu!'
+            area.style.background = '#f9f966'
+        }
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.10</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        div.square {
+        background-color: aqua; /*cor de fundo*/
+        width: 200px; /*largura*/
+        height: 200px; /*altura*/
+        line-height: 200px; /*altura da linha*/
+        border-radius: 15px;
+
+        font-family: 'Poppins', sans-serif;
+        text-align: center; /*centraliza o TEXTO*/
+        }
+    </style>
+</head>
+<body>
+    <div class="square" onclick="click" onmouseenter="entrar" onmouseout="sair">
+        Interaja!
+    </div>
+
+    <script>
+        var square = window.document.querySelector('.square')
+        //reconhecemos pelo DOM a div com id="square".
+
+        square.addEventListener ('click', clickar)
+        square.addEventListener ('mouseenter', entrar)
+        square.addEventListener ('mouseout', sair)
+        //nessa parte colocamos os listeners para sinalizar possível eventos específicos.
+        //a variável square antes sinalizada agora serviu para determinar para aquela div marcada alguns eventos.
+
+        function clickar() {
+            square.innerHTML = `Clickou`
+            square.style.backgroundColor = '#B9A7DA'
+        }
+        function entrar() {
+            square.innerHTML = 'Entrou'
+            square.style.backgroundColor = '#EC61A1'
+        }
+        function sair() {
+            square.innerHTML = 'Saiu'
+            square.style.backgroundColor = '#96DADD'
+        }
+        //o nome da function tem que ser compatível ao segundo termo dentro do () de addEventListener.
+    </script>
+    
+</body>
+</html>

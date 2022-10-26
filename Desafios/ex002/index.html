@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cor dinâmica com JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+
+        if (hora < 6)
+            {document.write('<strong>Boa madrugada!</strong> <br>')}
+        else if (hora <= 12) 
+            {document.write('<strong>Bom dia!</strong> <br>')}
+        else if (hora < 18) 
+            {document.write('<strong>Boa tarde!</strong> <br>')}
+        else if (hora >= 18) 
+            {document.write('<strong>Boa noite!</strong> <br>')}
+
+        document.write(`As horas são exatamente: <strong>${hora}h</strong><br>Selecione o período e personalize seu site!`)
+    </script>
+</header>
+
+<body id="body">
+    <div class="container">
+        <button class="manha" id="btn_manha" onclick="click">Manhã</button>
+        <button class="tarde" id="btn_tarde" onclick="click">Tarde</button>
+        <button class="noite" id="btn_noite" onclick="click">Noite</button>
+    </div>
+
+<script>   
+        var btn_manha = document.getElementById('btn_manha');
+        var btn_tarde = document.getElementById('btn_tarde') 
+        var btn_noite = document.getElementById('btn_noite')
+
+        btn_manha.addEventListener('click', click_manha)
+        btn_tarde.addEventListener('click', click_tarde)
+        btn_noite.addEventListener('click', click_noite)
+
+            function click_manha() {
+                document.body.style.backgroundColor = '#fcc580'
+            }
+
+            function click_tarde() {
+                document.body.style.backgroundColor = '#fbb22b'
+            }
+
+            function click_noite() {
+                document.body.style.backgroundColor = '#434343c0'
+            }
+</script>
+</body>
+</html>

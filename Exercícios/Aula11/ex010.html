@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #res {
+            font-size: 20px;
+            margin-top: 40px;
+
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(127, 255, 212, 0.581);
+            height: auto;
+            width: fit-content;
+            padding: 10px;
+            border-radius: 5px;   
+        }
+
+        #txtvel {
+            border-radius: 5px;
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro:
+    <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="verificar" onclick="calcular()">
+
+    <div id="res">
+        <strong>Resultado</strong>
+    </div>
+
+    <script>
+        
+        function calcular() {
+            var txtvel = window.document.querySelector('#txtvel')
+            var res = window.document.querySelector('#res')
+            var vel = Number(txtvel.value)
+            res.innerHTML = `<p><strong>Sua velocidade atual é de ${vel} Km/h</strong></p>`
+            if (vel > 60) {
+                res.innerHTML += `<p><strong>Você está multado!</strong></p>`
+            }
+                res.innerHTML += `<p>Dirija sempre com cuidado!</p>`
+        }
+    </script>
+    
+</body>
+</html>

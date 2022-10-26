@@ -1,0 +1,22 @@
+@charset "UTF-8"
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: linear-gradient(to top, lightpink, rgb(229, 124, 139));
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 2.0em;
+}
+
+main {
+    background-color: white;
+    padding: 1em;
+    width: auto;
+    text-align: center;
+    border-radius: 15px;
+}

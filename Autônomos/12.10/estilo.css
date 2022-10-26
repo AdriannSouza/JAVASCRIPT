@@ -1,0 +1,11 @@
+@charset "UTF-8"
+
+div#square{
+    background-color: aqua; /*cor de fundo*/
+    width: 200px; /*largura*/
+    height: 200px; /*altura*/
+    line-height: 200px; /*altura da linha*/
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; /*centraliza o TEXTO*/
+    border-radius: 20px;
+}
